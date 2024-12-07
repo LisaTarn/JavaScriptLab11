@@ -12,6 +12,10 @@ class productProperties{
     toString(){
         console.log(`Product: ${this.product}, Price: ${this.price}, Quantity: ${this.quantity}` )
     }
+
+    static applyDiscount(products, discount){
+        return products*discount
+    }
 }
 
 let product = new productProperties("Apple", 2.50, 2);
@@ -33,4 +37,6 @@ apple.toString();
 let cheese = new PerishableProductProperties("cheese", 17.00, 1, "2024-12-29");
 cheese.getTotalValue();
 cheese.toString();
+
+
 
