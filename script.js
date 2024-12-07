@@ -20,12 +20,14 @@ product.toString();
 
 class PerishableProductProperties extends productProperties{
     constructor(name, price, quantity, expirationDate){
-        this.name = name
-        this.price = price
-        this.quantity = quantity
+        super(name, price, quantity)
         this.expirationDate = expirationDate}
     toString(){
         console.log(`Product: ${this.product}, Price: ${this.price}, Quantity: ${this.quantity}, Expiration Date: ${this.expirationDate}` )
     }
 }
+
+let apple = new PerishableProductProperties("apple", 2.50, 2, "2024-12-31");
+apple.getTotalValue();
+apple.toString();
 
