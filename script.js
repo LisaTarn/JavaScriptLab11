@@ -17,3 +17,15 @@ class productProperties{
 let product = new productProperties("Apple", 2.50, 2);
 console.log(product.getTotalValue());
 product.toString();
+
+class PerishableProductProperties extends productProperties{
+    constructor(name, price, quantity, expirationDate){
+        this.name = name
+        this.price = price
+        this.quantity = quantity
+        this.expirationDate = expirationDate}
+    toString(){
+        console.log(`Product: ${this.product}, Price: ${this.price}, Quantity: ${this.quantity}, Expiration Date: ${this.expirationDate}` )
+    }
+}
+
