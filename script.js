@@ -30,4 +30,7 @@ class PerishableProductProperties extends productProperties{
 let apple = new PerishableProductProperties("apple", 2.50, 2, "2024-12-31");
 apple.getTotalValue();
 apple.toString();
+let cheese = new PerishableProductProperties("cheese", 17.00, 1, "2024-12-29");
+cheese.getTotalValue();
+cheese.toString();
 
