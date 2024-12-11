@@ -13,7 +13,7 @@ class productProperties{
     // methods for productProperties
 
     getTotalValue(){
-        let total = this.price * this.quantity;
+        let total = this.price * this.quantity;   //The total value would be the price multiplied by quantity
         return total;
     }
 
@@ -23,7 +23,7 @@ class productProperties{
 
     // Static method apply discount
 
-    static applyDiscount(products, discount){
+    static applyDiscount(products, discount){ //use for each method to apply discount to each element of array, price is price - (price multiplied by discount)
         products.forEach(product => {
             product.price -= product.price * discount;});
     }
@@ -71,14 +71,14 @@ addProduct(product){
 
 getInventoryValue(){
     let iValue = 0;
-    for(let i=0; i < this.inventory.length; i++){
+    for(let i=0; i < this.inventory.length; i++){ // for loop to cycle through each element of array, the inventory value is equal to the value of all the elements in array
         iValue += this.inventory[i].getTotalValue();
     }
-    return iValue;
+    return iValue.toFixed(2);
 };
 
 findProductByName(name) {
-    for (let i = 0; i < this.inventory.length; i++) {
+    for (let i = 0; i < this.inventory.length; i++) { // for loop to cycle through each element of array to see if the name of product matches element, and if so returns that particular object
         if (this.inventory[i].name === name) {
             return this.inventory[i];
         }
