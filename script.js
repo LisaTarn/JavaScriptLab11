@@ -6,17 +6,18 @@ class productProperties{
     }
 
     getTotalValue(){
-        return this.price * this.quantity;
+        let total = this.price * this.quantity;
+        return total;
     }
 
     toString(){
-        console.log(`Product: ${this.product}, Price: ${this.price}, Quantity: ${this.quantity}` )
+        console.log(`Product: ${this.name}, Price: ${this.price}, Quantity: ${this.quantity}` )
     }
 
     static applyDiscount(products, discount){
-        const price = products.map(item => item.price);
-        return price.map(price => price - (price*discount));
-}
+        products.forEach(product => {
+            product.price -= product.price * discount;});
+    }
 }
 
 let product = new productProperties('Apple', 2.50, 2);
@@ -27,20 +28,9 @@ class PerishableProductProperties extends productProperties{
     constructor(name, price, quantity, expirationDate){
         super(name, price, quantity)
         this.expirationDate = expirationDate}
-    toString(){
-        console.log(`Product: ${this.product}, Price: ${this.price}, Quantity: ${this.quantity}, Expiration Date: ${this.expirationDate}` )
+    
+        toString(){
+        console.log(`Product: ${this.name}, Price: ${this.price}, Quantity: ${this.quantity}, Expiration Date: ${this.expirationDate}` )
     }
 }
 
-let apple = new PerishableProductProperties("apple", 2.50, 2, "2024-12-31");
-apple.getTotalValue();
-apple.toString();
-let cheese = new PerishableProductProperties("cheese", 17.00, 1, "2024-12-29");
-cheese.getTotalValue();
-cheese.toString();
-
-
-let products = [
-    new productProperties("orange", 2.50, 3),
-    new productProperties("apple", 3.00, 7)
-];
