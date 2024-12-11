@@ -63,4 +63,10 @@ const apple = new PerishableProductProperties ('apple', 1.99, 398, 'Jan 15, 2025
 const milk = new PerishableProductProperties ('milk', 6.99, 325, "Jan 30, 2025");
 const snickers = new productProperties('snickers', 1.99, 432);
 
+const noFrills = new Store();
 
+noFrills.addProduct(beans);
+noFrills.addProduct(tinnedTomatoes);
+noFrills.addProduct(apple);
+noFrills.addProduct(milk);
+noFrills.addProduct(snickers);
