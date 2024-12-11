@@ -74,3 +74,6 @@ noFrills.addProduct(snickers);
 console.log(`Total inventory value before discount: ${noFrills.getInventoryValue()}`);
 productProperties.applyDiscount(noFrills.inventory, 0.1);
 console.log(`Total inventory value after discount: ${noFrills.getInventoryValue()}`);
+
+console.log(noFrills.findProductByName('milk'));
+
