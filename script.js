@@ -56,3 +56,11 @@ findProductByName(name) {
     }
     return null; 
 }};
+
+const beans = new productProperties('beans', 3.98, 100);
+const tinnedTomatoes = new productProperties('tinned tomatoes', 4.99, 200);
+const apple = new PerishableProductProperties ('apple', 1.99, 398, 'Jan 15, 2025')
+const milk = new PerishableProductProperties ('milk', 6.99, 325, "Jan 30, 2025");
+const snickers = new productProperties('snickers', 1.99, 432);
+
+
