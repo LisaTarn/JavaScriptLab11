@@ -20,10 +20,6 @@ class productProperties{
     }
 }
 
-let product = new productProperties('Apple', 2.50, 2);
-console.log(product.getTotalValue());
-product.toString();
-
 class PerishableProductProperties extends productProperties{
     constructor(name, price, quantity, expirationDate){
         super(name, price, quantity)
@@ -42,4 +38,12 @@ class Store {
 
 addProduct(product){
     this.inventory.push(product);
+}
+
+getInventoryValue(){
+    let iValue = 0;
+    for(let i=0; i < this.inventory.length; i++){
+        iValue += this.inventory[i].getTotalValue();
+    }
+    return iValue;
 }
